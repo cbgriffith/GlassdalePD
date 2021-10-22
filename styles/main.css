@@ -21,11 +21,13 @@ h1,h2,h3,h4,h5,h6 {
 .criminal-list-flex-container, .officers-list, .locations-list {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .criminal__card, .officer__card, .location__card {
 	border: 1px dotted black;
-	flex-grow: 1;
-	width: 33%;
-	height: auto;
+	flex-basis: 25%;
+	text-align: center;
+	margin: 2em;
+	padding-bottom: 2em;
 }
