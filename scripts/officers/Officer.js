@@ -1,7 +1,7 @@
-export const Officer = (Object) => {
+export const Officer = (officer) => {
     return `
-            <section>
-                ${Object.name}
-            </section
-    `
+            <section class="officer__card">
+                <div class="officer__name"><h3>${officer.name}</h3></div>
+                <div class="officer__id">ID: ${officer.id}</div>
+            </section>`
 }

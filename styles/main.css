@@ -18,15 +18,12 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
-.criminal-list-flex-container {
+.criminal-list-flex-container, .officers-list, .locations-list {
 	display: flex;
-	/* flex-direction: row; */
 	flex-wrap: wrap;
-	/* justify-content: space-evenly;
-	padding: 2em; */
 }
 
-.criminal__card {
+.criminal__card, .officer__card, .location__card {
 	border: 1px dotted black;
 	flex-grow: 1;
 	width: 33%;
