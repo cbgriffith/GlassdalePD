@@ -3,6 +3,10 @@ import { getCriminals, useCriminals } from "./CriminalDataProvider.js";
 
 const contentTarget = document.querySelector(".criminal-list-flex-container")
 
+document.querySelector("#criminals-nav-link").addEventListener("click", function(){
+    CriminalList();        
+  });
+
 export const CriminalList = () => {
     getCriminals()
     .then(() => {

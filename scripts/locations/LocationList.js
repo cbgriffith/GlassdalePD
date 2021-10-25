@@ -3,6 +3,10 @@ import { getLocations, useLocations } from "./LocationDataProvider.js";
 
 const contentTarget = document.querySelector(".locations-list")
 
+document.querySelector("#facilitiesnav-link").addEventListener("click", function(){
+    LocationList();          
+  });
+
 export const LocationList = () => {
     getLocations()
     .then(() => {

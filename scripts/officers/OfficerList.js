@@ -3,6 +3,10 @@ import { getOfficers, useOfficers } from "./OfficerDataProvider.js";
 
 const contentTarget = document.querySelector(".officers-list")
 
+document.querySelector("#officers-nav-link").addEventListener("click", function(){
+    OfficerList();          
+  });
+
 export const OfficerList = () => {
     getOfficers()
     .then(() => {
