@@ -13,7 +13,7 @@ export const LocationList = () => {
 
             let locationsArray = useLocations();
 
-            let locationHTML = "";
+            let locationHTML = "<h2>Facilities</h2>";
 
             locationsArray.forEach(singleLocationObj => {
 

@@ -13,7 +13,7 @@ export const OfficerList = () => {
 
             let officersArray = useOfficers();
 
-            let officerHTML = "";
+            let officerHTML = "<h2>Officers</h2>";
 
             officersArray.forEach(singleOfficerObj => {
 

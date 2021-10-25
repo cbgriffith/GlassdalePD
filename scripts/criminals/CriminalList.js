@@ -13,7 +13,7 @@ export const CriminalList = () => {
 
             let criminalsArray = useCriminals();
 
-            let criminalHTML = "";
+            let criminalHTML = "<h2>Criminals</h2>";
 
             criminalsArray.forEach(singleCriminalObj => {
 
