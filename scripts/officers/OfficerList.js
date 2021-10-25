@@ -1,7 +1,7 @@
 import { Officer } from './Officer.js'
 import { getOfficers, useOfficers } from "./OfficerDataProvider.js";
 
-const contentTarget = document.querySelector(".officers-list")
+const contentTarget = document.querySelector(".print-list")
 
 document.querySelector("#officers-nav-link").addEventListener("click", function(){
     OfficerList();          

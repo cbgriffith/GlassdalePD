@@ -1,7 +1,7 @@
 import { Location } from "./location.js"
 import { getLocations, useLocations } from "./LocationDataProvider.js";
 
-const contentTarget = document.querySelector(".locations-list")
+const contentTarget = document.querySelector(".print-list")
 
 document.querySelector("#facilitiesnav-link").addEventListener("click", function(){
     LocationList();          
