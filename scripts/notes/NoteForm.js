@@ -1,0 +1,39 @@
+import { saveNote } from "./NoteDataProvider.js"
+
+const contentTarget = document.querySelector(".noteFormContainer")
+
+// Handle browser-generated click event in component
+// eventHub.addEventListener("click", clickEvent => {
+//   if (clickEvent.target.id === "saveNote") {
+
+//       // Make a new object representation of a note
+//       const newNote = {
+
+//       }
+
+//       // Change API state and application state
+//       saveNote(newNote)
+//       .then(NoteList) // Refresh your list of notes once you've saved your new one
+//   }
+// })
+
+
+export const NoteForm = () => {
+    contentTarget.innerHTML = `<form>
+    <div>
+      <label>Suspect Name:</label>
+    </div>
+      <input type="text" id="note-suspect" required>
+    <div>
+      <label>Date:</label>
+    </div>
+      <input type="date" id="note-date" required>
+    <div>
+      <label>Note:</label>
+    </div>
+      <textarea id="note-text"></textarea required>
+    <div>
+      <button id="saveNote" class="btn btn-primary">Save</button>
+    </div>
+</form>`
+}
