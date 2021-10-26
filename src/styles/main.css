@@ -43,6 +43,7 @@ h1,h2,h3,h4,h5,h6 {
 
 #note__text {
 	height: 100px;
+	width: 300px;
 }
 
 form {

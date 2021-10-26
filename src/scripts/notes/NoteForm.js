@@ -13,7 +13,9 @@ contentTarget.addEventListener("click", clickEvent => {
          date: document.querySelector('#note__date').value,
          text: document.querySelector('#note__text').value
       }
-
+      document.querySelector("#note__criminalName").value = ""
+      document.querySelector("#note__date").value = ""
+      document.querySelector("#note__text").value = ""
       // Change API state and application state
       saveNote(newNote)
       .then(NoteList) // Refresh your list of notes once you've saved your new one
