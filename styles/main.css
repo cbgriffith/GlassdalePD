@@ -40,3 +40,11 @@ h1,h2,h3,h4,h5,h6 {
 	width: 100%;
 	flex-basis: 100%;
 }
+
+#note__text {
+	height: 100px;
+}
+
+form {
+	padding: 2rem;
+}
