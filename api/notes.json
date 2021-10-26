@@ -1,3 +1,28 @@
 {
-    "notes": []
+  "notes": [
+    {
+      "criminalName": "Michael Myers",
+      "date": "2021-10-31",
+      "text": "Murder",
+      "id": 1
+    },
+    {
+      "criminalName": "Freddy",
+      "date": "2021-10-31",
+      "text": "Murder",
+      "id": 2
+    },
+    {
+      "criminalName": "Jason",
+      "date": "2021-10-31",
+      "text": "Murder",
+      "id": 3
+    },
+    {
+      "criminalName": "Florida Man",
+      "date": "2021-10-29",
+      "text": "Crimes against humanity",
+      "id": 4
+    }
+  ]
 }
