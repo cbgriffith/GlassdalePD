@@ -3,6 +3,7 @@ import { OfficerList } from './officers/OfficerList.js';
 import { LocationList } from './locations/LocationList.js';
 import { NoteList } from "./notes/NoteList.js";
 import { NoteForm } from "./notes/NoteForm.js";
+import { ConvictionSelect } from "./convictions/ConvictionSelect.js";
 
 const darkModeButton = document.querySelector("#dark-mode")
 darkModeButton.addEventListener("click", function(){
@@ -14,3 +15,15 @@ darkModeButton.addEventListener("click", function(){
   })
 
   NoteForm()
+  ConvictionSelect()
+
+
+  // let fake = [
+  //   "amanda","andy","tommy","mel","brent","amanda","mel"
+  // ]
+
+  // let filteredArray = fake.filter(thingInLoop => {
+  //     return thingInLoop === "amanda"
+  // })
+
+  // console.log(filteredArray)

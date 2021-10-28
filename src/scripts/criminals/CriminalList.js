@@ -7,19 +7,35 @@ document.querySelector("#criminals-nav-link").addEventListener("click", function
     CriminalList();        
   });
 
-export const CriminalList = () => {
+export const CriminalList = (convictionFilter) => {
+    let criminalListContainer = document.querySelector(".print-list");
+    let criminalHTML = "<h2>Criminals</h2>";
+    criminalListContainer.innerHTML = criminalHTML
+    
+
     getCriminals()
     .then(() => {
 
             let criminalsArray = useCriminals();
 
-            let criminalHTML = "<h2>Criminals</h2>";
+            if(convictionFilter){
+
+                criminalsArray = criminalsArray.filter(singleCriminalInLoop => {
+                    return convictionFilter === singleCriminalInLoop.conviction
+                })
+            }
+
+            criminalsArray.forEach((singleCriminal) => {
+                contentTarget.innerHTML += Criminal(singleCriminal)
+            })
+
+            
 
             criminalsArray.forEach(singleCriminalObj => {
 
                 criminalHTML += Criminal(singleCriminalObj);
             });
 
-            contentTarget.innerHTML = criminalHTML
+            // criminalListContainer.innerHTML = criminalHTML
         });
 };
