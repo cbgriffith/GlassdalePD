@@ -25,7 +25,7 @@ export const CriminalList = (convictionFilter) => {
                 })
             }
             criminalsArray.forEach((singleCriminalObj) => {
-                contentTarget.innerHTML += Criminal(singleCriminalObj)
+                criminalListContainer.innerHTML += Criminal(singleCriminalObj)
             })
         });
 };
