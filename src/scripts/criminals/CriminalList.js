@@ -24,16 +24,8 @@ export const CriminalList = (convictionFilter) => {
                     return convictionFilter === singleCriminalInLoop.conviction
                 })
             }
-
-            criminalsArray.forEach((singleCriminal) => {
-                contentTarget.innerHTML += Criminal(singleCriminal)
+            criminalsArray.forEach((singleCriminalObj) => {
+                contentTarget.innerHTML += Criminal(singleCriminalObj)
             })
-
-            
-
-            criminalsArray.forEach(singleCriminalObj => {
-
-                criminalHTML += Criminal(singleCriminalObj);
-            });
         });
 };
