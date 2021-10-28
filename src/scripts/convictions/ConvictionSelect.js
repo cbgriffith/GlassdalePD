@@ -41,7 +41,7 @@ const eventHub = document.querySelector("body")
 
 eventHub.addEventListener("change", (eventObject) => {
 
-    if(event.target.id === "crimeSelect"){
+    if(eventObject.target.id === "crimeSelect"){
         console.log("You selected something from the crime dropdown")
         console.log("This is the crime that was selected: ", eventObject.target.value)
         // ---------- Your code goes here ----------- //
@@ -50,6 +50,6 @@ eventHub.addEventListener("change", (eventObject) => {
         - Start by importing the CriminalList component at the top of this file.
         - Then call CriminalList, and pass in information about the crime that was chosen
         */
-        CriminalList(event.target.value)
+        CriminalList(eventObject.target.value)
     }
 })
