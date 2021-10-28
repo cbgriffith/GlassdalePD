@@ -35,7 +35,5 @@ export const CriminalList = (convictionFilter) => {
 
                 criminalHTML += Criminal(singleCriminalObj);
             });
-
-            // criminalListContainer.innerHTML = criminalHTML
         });
 };
