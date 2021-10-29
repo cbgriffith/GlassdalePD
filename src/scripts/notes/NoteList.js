@@ -1,9 +1,11 @@
 import { Note } from "./Note.js"
 import { getNotes, useNotes } from "./NoteDataProvider.js";
+import { NoteForm } from "./NoteForm.js";
 
 const contentTarget = document.querySelector(".print-list")
 
 document.querySelector("#notes-nav-link").addEventListener("click", function(){
+    NoteForm();
     NoteList();        
   });
 

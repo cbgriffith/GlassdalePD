@@ -23,3 +23,29 @@ export const OfficerList = () => {
             contentTarget.innerHTML = officerHTML
         });
 };
+
+
+
+
+// export const OfficerList = (officerFilter) => {
+//     let officerListContainer = document.querySelector(".print-list");
+//     let officerHTML = "";
+//     officerListContainer.innerHTML = officerHTML
+    
+
+//     getOfficers()
+//     .then(() => {
+
+//             let officersArray = useOfficers();
+
+//             if(officerFilter){
+
+//                 officersArray = officersArray.filter(singleOfficerInLoop => {
+//                     return officerFilter === singleOfficerInLoop.conviction
+//                 })
+//             }
+//             officersArray.forEach((singleOfficerObj) => {
+//                 officerListContainer.innerHTML += Officer(singleOfficerObj)
+//             })
+//         });
+// };
