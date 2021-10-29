@@ -16,14 +16,10 @@ export const CriminalList = (selectListName, selectedChoice) => {
     let criminalHTML = "<h2>Criminals</h2>";
     criminalListContainer.innerHTML = criminalHTML
     
-
     getCriminals()
     .then(() => {
-
             let criminalsArray = useCriminals();
-
             if(selectListName === "crimes"){
-
                 criminalsArray = criminalsArray.filter(singleCriminalInLoop => {
                     return selectedChoice === singleCriminalInLoop.conviction
                 })
