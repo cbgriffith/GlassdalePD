@@ -35,10 +35,6 @@ const render = convictionsCollection => {
         </select>
     `
 }
-// document.querySelector("#criminals-nav-link").addEventListener("click", function(){
-//     ConvictionSelect();        
-//   });
-
 const eventHub = document.querySelector("body")
 
 eventHub.addEventListener("change", (eventObject) => {
