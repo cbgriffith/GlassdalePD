@@ -13,6 +13,7 @@ export const OfficerSelect = () => {
 
 const render = officerCollection => {
     contentTarget.innerHTML = `
+        <label>Filter by arresting officer</label><br>
         <select class="dropdown" id="officerSelect">
             <option value="0">Please select an officer...</option>
             ${

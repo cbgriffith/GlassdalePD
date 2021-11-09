@@ -24,6 +24,7 @@ const render = convictionsCollection => {
         Look back at the example provided above.
     */
     contentTarget.innerHTML = `
+        <label>Filter by crime</label><br>
         <select class="dropdown" id="crimeSelect">
             <option value="0">Please select a crime...</option>
             ${
