@@ -3,7 +3,7 @@
     {
       "criminalName": "Michael Myers",
       "date": "2021-10-31",
-      "text": "Murder",
+      "text": "Murderer",
       "id": 1
     },
     {
@@ -26,8 +26,8 @@
     },
     {
       "criminalName": "Brent",
-      "date": "2021-10-26",
-      "text": "asdfasdf",
+      "date": "2021-11-09",
+      "text": "Did a thing",
       "id": 5
     }
   ]
