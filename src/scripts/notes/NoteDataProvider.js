@@ -30,3 +30,13 @@ export const deleteNote = noteId => {
     })
 }
 
+export const updateNote = note => {
+
+    return fetch(`http://localhost:8088/notes/${note.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(note)
+    })
+}

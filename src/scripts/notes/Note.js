@@ -1,5 +1,6 @@
 import { deleteNote } from "./NoteDataProvider.js";
 import { NoteList } from "./NoteList.js";
+import { NoteEditForm } from "./NoteEditForm.js"
 
 
 export const Note = (note) => {
@@ -9,6 +10,7 @@ export const Note = (note) => {
             <div class="note__date">${new Date(note.date).toLocaleDateString('en-US')}</div>
             <div class="note__text"><p>${note.text}</p></div>
             <button id="deleteNote--${note.id}" class="btn btn-primary">Delete</button>
+            <button id="editNote--${note.id}" class="btn btn-primary">Edit</button>
         </section>`
 }
 
@@ -24,3 +26,11 @@ eventHub.addEventListener("click", (eventObject) => {
     .then(NoteList)
   }
 })
+
+eventHub.addEventListener("click", (eventObject) => {
+  if (eventObject.target.id.startsWith("editNote")) {
+    const noteId = +eventObject.target.id.split("--")[1]
+    NoteEditForm(noteId);
+  }
+})
+
