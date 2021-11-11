@@ -33,6 +33,8 @@ eventHub.addEventListener("click", (eventObject) => {
             date: document.querySelector('#note-date').value,
             text: document.querySelector('#note-text').value,
             id: document.querySelector('#note-id').value // how can you get the note's id?
+            //**other way to get the id**
+            // id: eventObject.target.id.split("-")[1]
         }
         // Send to json-server and refresh the list
         updateNote(editedNote).then(NoteList)
