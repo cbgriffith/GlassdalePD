@@ -22,9 +22,10 @@ export const NoteEditForm = (noteId) => {
         <button id="saveNoteChanges-${noteId}" class="btn btn-primary">Save Changes</button>
     `
 }
+
 let eventHub = document.querySelector("body")
-eventHub.addEventListener("click", (event) => {
-    if(event.target.id.startsWith("saveNoteChanges")){
+eventHub.addEventListener("click", (eventObject) => {
+    if(eventObject.target.id.startsWith("saveNoteChanges")){
 
         // Make a new object representation of a note
         const editedNote = {
@@ -35,6 +36,5 @@ eventHub.addEventListener("click", (event) => {
         }
         // Send to json-server and refresh the list
         updateNote(editedNote).then(NoteList)
-
     }
 })

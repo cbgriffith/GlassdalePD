@@ -14,14 +14,11 @@ export const NoteList = () => {
     .then(() => {
 
             let notesArray = useNotes();
-
             let noteHTML = "<h2>Notes</h2>";
 
             notesArray.forEach(singleNoteObj => {
-
                 noteHTML += Note(singleNoteObj);
             });
-
             contentTarget.innerHTML = noteHTML
         });
 };
