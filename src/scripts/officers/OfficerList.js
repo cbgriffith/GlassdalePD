@@ -12,14 +12,10 @@ export const OfficerList = () => {
     .then(() => {
 
             let officersArray = useOfficers();
-
             let officerHTML = "<h2>Officers</h2>";
-
             officersArray.forEach(singleOfficerObj => {
-
                 officerHTML += Officer(singleOfficerObj);
             });
-
             contentTarget.innerHTML = officerHTML
         });
 };

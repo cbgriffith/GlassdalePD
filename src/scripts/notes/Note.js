@@ -1,12 +1,12 @@
 import { deleteNote } from "./NoteDataProvider.js";
-import { NoteList } from "./NoteList.js";
 import { NoteEditForm } from "./NoteEditForm.js"
+import { NoteList } from "./NoteList.js";
 
 
-export const Note = (note) => {
+export const Note = (note, criminal) => {
     return `
         <section class="note__card">
-            <div class="note__criminalName"><h4>${note.criminalName}</h4></div>
+            <div class="note__criminalName"><h4>${criminal.name}</h4></div>
             <div class="note__date">${new Date(note.date).toLocaleDateString('en-US')}</div>
             <div class="note__text"><p>${note.text}</p></div>
             <button id="deleteNote--${note.id}" class="btn btn-primary">Delete</button>

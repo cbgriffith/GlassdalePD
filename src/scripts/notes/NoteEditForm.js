@@ -1,5 +1,6 @@
 import { useNotes, updateNote } from "./NoteDataProvider.js"
 import { NoteList } from "./NoteList.js";
+import { useCriminals } from "../criminals/CriminalDataProvider.js";
 
 // We're going to print the edit form where the "add note" form usually goes. We could move it around on the page by changing our content target.
 const contentTarget = document.querySelector(".noteFormContainer")
@@ -7,6 +8,7 @@ const contentTarget = document.querySelector(".noteFormContainer")
 export const NoteEditForm = (noteId) => {
     // Give this component access to our application's notes state
     const allNotes = useNotes();
+    const criminalCollection = useCriminals();
 
     // Find the note that we clicked on by its unique id
     const noteWeWantToEdit = allNotes.find(singleNote=> singleNote.id === noteId)
@@ -17,7 +19,10 @@ export const NoteEditForm = (noteId) => {
         <h2>Edit Note</h2>
         <input type="date" id="note-date" value="${noteWeWantToEdit.date}" />
         <input type="text" value="${noteWeWantToEdit.text}" id="note-text" />
-        <input type="text" value="${noteWeWantToEdit.criminalName}" id="note-criminalName" />
+        <select id="criminalEdit-FK" class="form-control criminalSelect">
+            <option value="0">Please select a Criminal</option>
+             ${criminalCollection.map(taco => taco.id === noteWeWantToEdit.criminalId ? `<option selected value="${ taco.id }">${ taco.name }</option>`: `<option value="${ taco.id }">${ taco.name }</option>` )}
+        </select>
         <input type="hidden" id="note-id" value="${noteWeWantToEdit.id}" />
         <button id="saveNoteChanges-${noteId}" class="btn btn-primary">Save Changes</button>
     `
@@ -29,7 +34,7 @@ eventHub.addEventListener("click", (eventObject) => {
 
         // Make a new object representation of a note
         const editedNote = {
-            criminalName: document.querySelector('#note-criminalName').value,
+            criminalId: document.querySelector('#criminalEdit-FK').value,
             date: document.querySelector('#note-date').value,
             text: document.querySelector('#note-text').value,
             id: document.querySelector('#note-id').value // how can you get the note's id?

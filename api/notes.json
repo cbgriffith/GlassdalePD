@@ -1,34 +1,22 @@
 {
   "notes": [
     {
-      "criminalName": "Michael Myers",
-      "date": "2021-10-31",
-      "text": "Murder",
+      "criminalId": "2",
+      "date": "2021-11-16",
+      "text": "hurt someone",
       "id": 1
     },
     {
-      "criminalName": "Freddy",
-      "date": "2021-10-31",
-      "text": "Murder",
+      "date": "2021-11-16",
+      "text": "jljkhkjl",
+      "criminalId": 8,
       "id": 2
     },
     {
-      "criminalName": "Jason",
-      "date": "2021-10-31",
-      "text": "Murder",
+      "date": "2021-11-16",
+      "text": "Did something",
+      "criminalId": "13",
       "id": 3
-    },
-    {
-      "criminalName": "Florida Man",
-      "date": "2021-10-29",
-      "text": "Crimes against humanity",
-      "id": 4
-    },
-    {
-      "criminalName": "Brent",
-      "date": "2021-11-09",
-      "text": "Did a thing",
-      "id": 5
     }
   ]
 }
